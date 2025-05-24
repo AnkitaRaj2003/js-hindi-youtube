@@ -1,6 +1,6 @@
 // Dates
 
-let myDate = new Date()
+let myDate = new Date()  //gives current date and time
 // console.log(myDate.toString());
 // console.log(myDate.toDateString());
 // console.log(myDate.toLocaleString());
@@ -13,11 +13,11 @@ let myDate = new Date()
 let myCreatedDate = new Date("01-14-2023") //mm-dd-yy
 // console.log(myCreatedDate.toLocaleString());
 
-let myTimeStamp = Date.now()
+let myTimeStamp = Date.now()  //Date.now() returns the current time in milliseconds since January 1, 1970, 00:00:00 UTC
 
 // console.log(myTimeStamp);
 // console.log(myCreatedDate.getTime());
-// console.log(Math.floor(Date.now()/1000));
+// console.log(Math.floor(Date.now()/1000));  - in seconds
 
 let newDate = new Date()
 console.log(newDate);
