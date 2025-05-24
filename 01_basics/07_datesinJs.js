@@ -7,10 +7,10 @@ let myDate = new Date()
 // console.log(typeof myDate); //Object
 
 // Declaring our own date
-// let myCreatedDate = new Date(2023, 0, 23)
-// let myCreatedDate = new Date(2023, 0, 23, 5, 3)
-// let myCreatedDate = new Date("2023-01-14")
-let myCreatedDate = new Date("01-14-2023")
+// let myCreatedDate = new Date(2023, 0, 23)  // year month date - month starts with 0
+// let myCreatedDate = new Date(2023, 0, 23, 5, 3)   // year month date hour min sec - let myCreatedDate = new Date(2023, 0, 23,5,3,90) => Mon Jan 23 2023 05:04:30 GMT+0530 (India Standard Time)
+// let myCreatedDate = new Date("2023-01-14")  //yy-mm-dd
+let myCreatedDate = new Date("01-14-2023") //mm-dd-yy
 // console.log(myCreatedDate.toLocaleString());
 
 let myTimeStamp = Date.now()
