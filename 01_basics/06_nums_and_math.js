@@ -16,6 +16,11 @@ const hundreds = 1000000
 
 // +++++++++++++ Maths +++++++++++++++++++++++++++++
 
+// console.log(Number.MAX_VALUE)
+// console.log(Number.MAX_SAFE_INTEGER)
+// console.log(Number.MIN_VALUE)
+// console.log(Number.MIN_SAFE_INTEGER)
+
 // console.log(Math);
 // console.log(Math.abs(-4));
 // console.log(Math.round(4.6));
@@ -23,12 +28,13 @@ const hundreds = 1000000
 // console.log(Math.floor(4.9));
 // console.log(Math.min(4, 3, 6, 8));
 // console.log(Math.max(4, 3, 6, 8));
+// console.log(Math.PI);
 
-console.log(Math.random());
-console.log((Math.random()*10) + 1);
-console.log(Math.floor(Math.random()*10) + 1);
+console.log(Math.random()); // return value between [0,1)
+console.log((Math.random()*10) + 1);  //returns float value 1 to 10
+console.log(Math.floor(Math.random()*10) + 1);  //return int value 1 to 10
 
 const min = 10
 const max = 20
 
-console.log(Math.floor(Math.random() * (max - min + 1)) + min)
+console.log(Math.floor(Math.random() * (max - min + 1)) + min) // returns value between min and max
