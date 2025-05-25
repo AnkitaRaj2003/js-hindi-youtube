@@ -1,3 +1,5 @@
+//Objects - an object is a data structure that stores collections of key-value pairs, known as properties. 
+
 // singleton
 // Object.create
 
@@ -8,7 +10,7 @@ const mySym = Symbol("key1")
 
 const JsUser = {
     name: "Hitesh",
-    "full name": "Hitesh Choudhary",
+    "full name": "Hitesh Choudhary", // this property cannot be accessed using dot operator i.e, JsUser."full name" is not allowed, use JsUser["full name"]
     [mySym]: "mykey1",
     age: 18,
     location: "Jaipur",
@@ -23,7 +25,7 @@ const JsUser = {
 // console.log(JsUser[mySym])
 
 JsUser.email = "hitesh@chatgpt.com"
-// Object.freeze(JsUser)
+// Object.freeze(JsUser) // changes made on JsUser after this are not propogated
 JsUser.email = "hitesh@microsoft.com"
 // console.log(JsUser);
 
