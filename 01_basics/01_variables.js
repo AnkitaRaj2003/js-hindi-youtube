@@ -1,3 +1,5 @@
+//Why u should never use var : https://www.youtube.com/watch?v=cHHU0jXfjKY&list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37&index=21
+
 const accountId = 144553
 let accountEmail = "hitesh@google.com"
 var accountPassword = "12345"
