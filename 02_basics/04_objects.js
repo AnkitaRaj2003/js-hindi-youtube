@@ -66,18 +66,20 @@ const course = {
 }
 
 // course.courseInstructor
-
+const {courseInstructor} = course
+// console.log(courseInstructor); - hitesh
 const {courseInstructor: instructor} = course
+// console.log(instructor); - hitesh
 
-// console.log(courseInstructor);
-console.log(instructor);
-
+// JSON Syntax
 // {
 //     "name": "hitesh",
 //     "coursename": "js in hindi",
 //     "price": "free"
 // }
 
+
+// When we receive JSON object it is converted to an array
 [
     {},
     {},
