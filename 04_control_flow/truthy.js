@@ -13,6 +13,10 @@ if (userEmail) {
 //truthy values
 // "0", 'false', " ", [], {}, function(){}
 
+// false==0  - true
+// false=='' - true
+// 0=='' - true
+
 // if (userEmail.length === 0) {
 //     console.log("Array is empty");
 // }
@@ -24,12 +28,13 @@ if (Object.keys(emptyObj).length === 0) {
 }
 
 // Nullish Coalescing Operator (??): null undefined
+// The nullish coalescing (??) operator is a logical operator that returns its right-hand side operand when its left-hand side operand is null or undefined.
 
 let val1;
-// val1 = 5 ?? 10
-// val1 = null ?? 10
+// val1 = 5 ?? 10   - 5
+// val1 = null ?? 10  - 10
 // val1 = undefined ?? 15
-val1 = null ?? 10 ?? 20
+val1 = null ?? 10 ?? 20 // 10
 
 
 
