@@ -43,6 +43,7 @@ if (true) {
 
 // ++++++++++++++++++ interesting ++++++++++++++++++
 
+// Hoisting refers to the default behavior where declarations of variables and functions are moved to the top of their scope before code execution. 
 
 console.log(addone(5))
 
