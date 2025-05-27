@@ -4,7 +4,7 @@
 (function chai(){
     // named IIFE
     console.log(`DB CONNECTED`);
-})();
+})(); // use semicolon at the end
 
 ( (name) => {
     console.log(`DB CONNECTED TWO ${name}`);
