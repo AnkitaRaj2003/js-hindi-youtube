@@ -26,7 +26,7 @@ const user = {
 
 // const chai = function () {
 //     let username = "hitesh"
-//     console.log(this.username);
+//     console.log(this.username);  - undefined, 
 // }
 
 const chai =  () => {
@@ -41,11 +41,11 @@ const chai =  () => {
 //     return num1 + num2
 // }
 
-// const addTwo = (num1, num2) =>  num1 + num2
+// const addTwo = (num1, num2) =>  num1 + num2   - only one line statement so we can write it like this also
 
 // const addTwo = (num1, num2) => ( num1 + num2 )
 
-const addTwo = (num1, num2) => ({username: "hitesh"})
+const addTwo = (num1, num2) => ({username: "hitesh"})  //wrapping in parathesis () is compulsory in this case
 
 
 console.log(addTwo(3, 4))
@@ -53,4 +53,4 @@ console.log(addTwo(3, 4))
 
 // const myArray = [2, 5, 3, 7, 8]
 
-// myArray.forEach()
+// myArray.forEach(() => ())
