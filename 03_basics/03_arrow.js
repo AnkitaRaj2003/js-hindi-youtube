@@ -1,3 +1,5 @@
+// The this keyword in JavaScript refers to the object that is currently executing the code.
+
 const user = {
     username: "hitesh",
     price: 999,
@@ -13,7 +15,7 @@ const user = {
 // user.username = "sam"
 // user.welcomeMessage()
 
-// console.log(this);
+// console.log(this);  -- READ ABOUT GLOBAL OBJECT - WINDOW FOR BROWSERS
 
 // function chai(){
 //     let username = "hitesh"
