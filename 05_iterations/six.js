@@ -1,17 +1,21 @@
-// const coding = ["js", "ruby", "java", "python", "cpp"]
+// forEach executes a provided function once for each array element.
+// It does not return anything useful (i.e., the return value of forEach is always undefined).
 
+// const coding = ["js", "ruby", "java", "python", "cpp"]
 
 // const values = coding.forEach( (item) => {
 //     //console.log(item);
 //     return item
 // } )
 
-// console.log(values);
+// console.log(values); - undefined
+
+//The filter() method of Array instances creates a shallow copy of a portion of a given array, filtered down to just the elements from the given array that pass the test implemented by the provided function.
 
 const myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-// const newNums = myNums.filter( (num) => {
-//     return num > 4
+// const newNums = myNums.filter( (num) => {           OR const new Nums = myNums.filter((num) => num>4) - if we use parathesis then we need to explicitely write return keyword
+//     return num > 4               - [5,6,7,8,9,10]   returns value that satisfies the specified condition i.e, num>4
 // } )
 
 // const newNums = []
