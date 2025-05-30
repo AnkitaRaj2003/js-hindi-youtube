@@ -19,6 +19,9 @@
    </div>
 </body>
 <script>
+    // WHY DO WE PREFER ADDEVENTLISTENER OVER ONCLICK METHOD
+
+    
     // document.getElementById('owl').onclick = function(){
     //     alert("owl clicked")
     // }
@@ -26,22 +29,42 @@
      // attachEvent()
     // jQuery - on
 
+    // Read about these addeventlistener functionality
     // type, timestamp, defaultPrevented
     // target, toElement, srcElement, currentTarget,
     // clientX, clientY, screenX, screenY
     // altkey, ctrlkey, shiftkey, keyCode
 
+    // STRUCTURE OF ADDEVENTLISTENER: addEventListener(type, listener, useCapture);- WHAT IS USECAPTURE? it is related to event propagation. 
+    // The third parameter (useCapture) controls whether the event is handled during the capture phase or the bubble phase.
+    // If you write false (or leave it out), the event is handled during the bubbling phase (which is the default and most commonly used).
+    // 🔁 Event Propagation Phases:
+    // Capturing Phase – Event goes from the top of the DOM (document) down to the target.
+    // Target Phase – The actual element that was clicked.
+    // Bubbling Phase – The event then bubbles up from the target back to the top.
+    // WATCH THIS: https://www.youtube.com/watch?v=_ALUMTa8BAE&list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37&index=36    TIME: 20:20
+    
     // document.getElementById('images').addEventListener('click', function(e){
     //     console.log("clicked inside the ul");
     // }, false)
 
+    
     // document.getElementById('owl').addEventListener('click', function(e){
     //     console.log("owl clicked");
-    //     e.stopPropagation()
+    //     e.stopPropagation() --For stopping the propogation
     // }, false)
     
+    // The preventDefault() method is used to stop the browser's default behavior when an event occurs, call it inside an event listener where event is the event object. 
+    // | Event                     | Default Behavior                            | Why Use `preventDefault()`?                  |
+    // | ------------------------- | ------------------------------------------- | -------------------------------------------- |
+    // | `click` on a link (`<a>`) | Navigates to the link                       | Stop navigation                              |
+    // | `submit` on a form        | Sends form and reloads page                 | Stop submission to handle it with JavaScript |
+    // | `keydown`                 | Scrolls page for arrow keys, spacebar, etc. | Stop scrolling or trigger custom action      |
+    // | `dragover`                | Denies drop by default                      | Allow dropping elements                      |
+
+    
     // document.getElementById('google').addEventListener('click',function(e){
-    //     e.preventDefault();
+    //     e.preventDefault();  
     //     e.stopPropagation()
     //     console.log("google clicked");
     // }, false)
