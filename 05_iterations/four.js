@@ -1,3 +1,4 @@
+// CHECK: DIfference between for in and for of loops
 const myObject = {
     js: 'javascript',
     cpp: 'C++',
