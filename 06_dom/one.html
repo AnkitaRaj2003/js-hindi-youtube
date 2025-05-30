@@ -1,5 +1,50 @@
 <!--  DOM: https://www.youtube.com/watch?v=DcjNkHtDj8A&list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37&index=31 -->
 
+<!--
+1) set, add or remove any attribute
+setattribute,getattribute and removeattribute
+The setAttribute() method of the Element interface sets the value of an attribute on the specified element. If the attribute already exists, the value is updated; otherwise a new attribute is added with the specified name and value.
+To get the current value of an attribute, use getAttribute(); to remove an attribute, call removeAttribute().
+
+EX: document.getElementById('title').getAttribute('class');
+EX: document.getElementById('title').setAttribute('class','test');  - if already it has a class then it overrides otherwise new class
+EX: document.getElementById('title').setAttribute('class','test heading');  - set two classes
+
+2) Adding style
+document.getElementById('title').style.backgroundColor = "red";
+OR
+const title = document.getElementById('title');
+title.style.backgroundColor = "red";
+
+3) textContent, innerHTML, innerText
+
+innerText returns the visible text contained in a node, while textContent returns the full text. For example, on the following HTML <span>Hello <span style="display: none;">World</span></span>, innerText will return 'Hello', while textContent will return 'Hello World'. innerHTML reads both the HTML markup and the text content of the element, it will return 'Hello <span style="display: none;">World</span>'.
+
+4) getElementByClassName, query selector
+The querySelector() method returns the first element that matches a CSS selector.
+To return all matches (not only the first), use the querySelectorAll() instead.
+EX: document.querySelector('#title')
+EX: document.querySelector('p')
+EX: document.querySelector('input[type="password"]')
+
+5) NodeList and HTMLCollection: https://www.freecodecamp.org/news/dom-manipulation-htmlcollection-vs-nodelist/
+Check what loops works on NodeList and HTMLCollection
+| Loop Type                      | NodeList | HTMLCollection    |
+| ------------------------------ | -------- | ----------------- |
+| `for`                          | ✅        | ✅                 |
+| `for...of`                     | ✅        | ✅                 |
+| `forEach`                      | ✅        | ❌ (convert first) |
+| `Array.from()` + Array methods | ✅        | ✅                 |
+
+
+Convert them to an Array: 
+const nodelistarr = document.querySelectorAll('li')
+const nodearr = Array.from(nodelistarr) - similar for htmlcollection
+
+we can access the elements in them using 0 based indices
+-->
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
