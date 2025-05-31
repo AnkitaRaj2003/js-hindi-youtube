@@ -1,3 +1,9 @@
+<!-- 
+Web APIs are built-in browser features (not part of core JavaScript) that let JavaScript interact with the browser and the outside world. They live outside the JavaScript engine and are provided by the browser (like Chrome, Firefox) or Node.js environment.: They make async behavior possible in a single-threaded language like JavaScript.
+
+setTimeout: Runs a function once after a delay (in milliseconds).
+setInterval: Runs a function repeatedly every fixed interval.
+ -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,6 +26,7 @@
     const changeMe = setTimeout(changeText, 2000)
 
     document.querySelector('#stop').addEventListener('click', function(){
+        // Pass the reference of the setTimeout which we want to clear before it executes
         clearTimeout(changeMe)
         console.log("STOPPED")
     })
