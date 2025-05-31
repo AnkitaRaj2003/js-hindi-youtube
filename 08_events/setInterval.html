@@ -28,3 +28,45 @@ arg1, arg2, ...: These are optional arguments that will be passed directly to th
     clearInterval(intervalId)
 </script>
 </html>
+
+
+
+<!-- PROJECT -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const startbtn = document.getElementById("start");
+    const stopbtn = document.getElementById("stop");
+    let startInt = null;
+
+    const startFunc = function(){
+        if (startInt === null) {
+            startInt = setInterval(() => {
+                console.log(Date.now());
+            }, 1000);
+        }
+    }
+
+    const stopFunc = function(){
+        if (startInt !== null) {
+            clearInterval(startInt);
+            console.log("Stopped");
+            startInt = null;
+        }
+    }
+
+    startbtn.addEventListener('click', startFunc);
+    stopbtn.addEventListener('click', stopFunc);
+</script>
+
+</html>
