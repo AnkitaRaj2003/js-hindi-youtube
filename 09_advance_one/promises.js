@@ -53,6 +53,21 @@ const promiseFour = new Promise(function(resolve, reject){
 }).finally(() => console.log("The promise is either resolved or rejected"))
 
 
+// async – Means "this function works asynchronously"
+// "This function can pause and resume later."
+// You mark a function as async when it contains steps that may take time (e.g., waiting for a server, reading a file, or setting a timer).
+// It lets JavaScript run other code while waiting, instead of freezing the whole program.
+
+// await – Means "pause here until it’s ready"
+// "Hold on here until we get the result, then move on."
+// Used only inside an async function.
+// It stops that line of code temporarily while the result is loading — but doesn’t block the whole app.
+
+// "An asynchronous (async) function is meant for tasks that may take time to complete (like network requests or timers). That's why we use await inside it — to pause and wait for that specific task to finish, while JavaScript can continue running other code in the background."
+// 🔍 Key Concepts Explained:
+// async: Marks a function as asynchronous, allowing the use of await inside it.
+// await: Waits for a specific asynchronous operation (like fetching data) to complete.
+// Non-blocking: While waiting with await, JavaScript doesn’t stop everything — it continues running other tasks on the call stack (thanks to the event loop and Web APIs).
 
 const promiseFive = new Promise(function(resolve, reject){
     setTimeout(function(){
@@ -93,7 +108,7 @@ fetch('https://api.github.com/users/hiteshchoudhary')
 .then((response) => {
     return response.json()
 })
-.then((data) => {
+.then((data) => {   // uppar wale function ne jo return kara hai vo isme aaega
     console.log(data);
 })
 .catch((error) => console.log(error))
