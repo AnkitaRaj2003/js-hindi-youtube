@@ -23,6 +23,7 @@ Read about XMLHttpRequest
     xhr.onreadystatechange = function(){
         console.log(xhr.readyState);
         if (xhr.readyState === 4) {
+            // JSON.parse() is a method used in JavaScript to convert a JSON string into a JavaScript object.
             const data = JSON.parse(this.responseText)
             console.log(typeof data);
             console.log(data.followers);
