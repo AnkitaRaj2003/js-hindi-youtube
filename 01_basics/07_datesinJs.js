@@ -1,10 +1,10 @@
 // Dates
 
 let myDate = new Date()  //gives current date and time
-// console.log(myDate.toString());
-// console.log(myDate.toDateString());
-// console.log(myDate.toLocaleString());
-// console.log(typeof myDate); //Object
+// console.log(myDate.toString());  - Fri Jul 18 2025 17:00:26 GMT+0530 (India Standard Time)
+// console.log(myDate.toDateString());   - 'Fri Jul 18 2025
+// console.log(myDate.toLocaleString());   - '7/18/2025, 5:00:26 PM'
+// console.log(typeof myDate); //Object    
 
 // Declaring our own date
 // let myCreatedDate = new Date(2023, 0, 23)  // year month date - month starts with 0
