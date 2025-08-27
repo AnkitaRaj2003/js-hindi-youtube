@@ -196,4 +196,11 @@ numbers.forEach((num) => console.log(num));
 // Output: 1 2 3
 
 => map:
+map is an array method that creates a new array by applying a callback function to each element of the original array.
 
+const numbers = [1,2,3,4]
+function double(n){
+  return n*2;
+}
+const num1 = numbers.forEach(double) // undefined - foreach doesnt return anything it just do some tasks
+const num2 = numbers.map(double)     // [2,4,6,8]
