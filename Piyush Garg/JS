@@ -1,7 +1,7 @@
 Q What is JS?
 JavaScript is a programming language used in web pages to add interactivity and dynamic behavior, beyond just structure (HTML) and style (CSS).
 
--------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------
 
 - JS is a loosely types language
 
@@ -38,6 +38,21 @@ Hoisting	                  Hoisted → undefined	      Hoisted → TDZ	        H
 Initialization	            Optional	                Optional	            Mandatory at declaration
 
 
--------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------
 
 => Datatypes in JS: Number, String, Boolean, NULL, Undefined, Objects
+
+- NULL: null is a primitive value in JavaScript that represents the intentional absence of any object value. It means “nothing” or “empty value”.
+- Undefined: undefined is a primitive value in JavaScript that means a variable has been declared but not assigned a value yet. It’s the default value given by JavaScript.
+- Objects: An object is a collection of key-value pairs (properties). Keys are strings (or symbols), and values can be any data type, including other objects or functions.
+let person = {
+  name: "Ankita",
+  age: 22,
+  greet: function() { console.log("Hello!"); }
+};
+- NaN: NaN stands for “Not-a-Number”. It is a special numeric value that represents a value that cannot be converted to a valid number.
+
+=> typeof operator - give type of a variable
+=> Converting a string to Number: '123'*1
+whereas 'a'*1 give NaN bcz it is not a valid operation
+
