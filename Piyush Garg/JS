@@ -50,9 +50,150 @@ let person = {
   age: 22,
   greet: function() { console.log("Hello!"); }
 };
+
 - NaN: NaN stands for “Not-a-Number”. It is a special numeric value that represents a value that cannot be converted to a valid number.
 
 => typeof operator - give type of a variable
 => Converting a string to Number: '123'*1
 whereas 'a'*1 give NaN bcz it is not a valid operation
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+=> arguements in js
+arguments is an array-like object available inside every non-arrow function that contains all the arguments passed to that function.
+It allows access to all passed parameters, even if the function doesn’t explicitly define them.
+Arrow functions do NOT have their own arguments object.
+
+🔹 Example:
+function sum() {
+  let total = 0;
+  for(let i = 0; i < arguments.length; i++) {
+    total += arguments[i];
+  }
+  return total;
+}
+console.log(sum(2, 3, 4)); // 9
+
+🔹 Key Points (Interview-friendly)
+arguments is array-like, but not a real array (Array.isArray(arguments) → false).
+Can be converted to an array:
+let args = Array.from(arguments);
+Useful when the number of function arguments is unknown.
+With ES6, rest parameters (...args) are now preferred over arguments.
+function sum(...args) {
+  return args.reduce((a,b) => a+b, 0);
+}
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+=> ARROW FUNCTIONS: Arrow functions are concise functions that do not have their own this or arguments, and are not hoisted.
+
+1. Syntax:
+// Single argument, single expression
+const square = x => x * x;
+// Multiple arguments
+const sum = (a, b) => a + b;
+// Multiple statements (needs braces and return)
+const sumAndLog = (a, b) => {
+  console.log(a, b);
+  return a + b;
+};
+
+2. Arguments keyword:
+Arrow functions do NOT have their own arguments object.
+arguments inside an arrow function refers to the enclosing (outer) function’s arguments.
+function test() {
+  const arrow = () => console.log(arguments);
+  arrow();
+}
+test(1, 2); // logs [1, 2]
+
+- But we can use spread operator
+const sumAndLog = (...a) => {
+  console.log(a);
+};
+
+3. Hoisting
+Arrow functions are not hoisted while normal functions are hoisted.
+They must be defined before they are called.
+console.log(sum(2,3)); // ❌ ReferenceError
+const sum = (a,b) => a+b;
+
+4. this keyword
+Normal function: this refers to the caller, whereas in an arrow function, it refers to the global window object.
+const obj = {
+  name: "Ankita",
+  arrowFunc: () => console.log(this.name),
+  regularFunc: function() { console.log(this.name); }
+};
+
+obj.arrowFunc();   // undefined (inherits global this)
+obj.regularFunc(); // Ankita
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+=> High Order Function: A higher-order function is a function that takes another function as an argument, returns a function, or both.
+
+🔹 Examples
+1. Passing function as argument
+function greet(name, formatter) {
+  console.log("Hello " + formatter(name));
+}
+
+function upperCaseName(name) {
+  return name.toUpperCase();
+}
+
+greet("Ankita", upperCaseName); // Hello ANKITA
+2. Returning a function
+function multiplier(factor) {
+  return function(number) {
+    return number * factor;
+  }
+}
+
+const double = multiplier(2);
+console.log(double(5)); // 10
+
+- Why are they used?
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+🔹 What is an Array in JavaScript?
+An array is an ordered collection of values, where each value (element) can be of any data type. Arrays are zero-indexed and are a type of object in JavaScript.
+let arr = [1, "hello", true, {name:"Ankita"}];
+
+🔹 Key Points (Interview-friendly)
+- Arrays are dynamic: can grow or shrink.
+- Elements can be of mixed types.
+- Arrays are objects, so typeof arr returns "object".
+- Common operations include adding, removing, and iterating elements.
+
+🔹 Common Array Operations
+
+Operation	                        Example
+-----------------------------------------------------------------------------
+Access element	                  arr[0]
+Add element (end)	                arr.push(5)
+Remove element (end)	            arr.pop()
+Add element (start)	              arr.unshift(0)
+Remove element (start)	          arr.shift()
+Length	                          arr.length
+Iterate	                          arr.forEach(item => console.log(item))
+Transform	                        arr.map(x => x*2)
+Filter	                          arr.filter(x => x > 2)
+Reduce	                          arr.reduce((acc, x) => acc + x, 0)
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+- callback function: A callback function is a function that is passed as an argument to another function, with the intention that it will be executed at a later point in time by the receiving function.
+
+=> forEach:
+- forEach is an array method that executes a provided callback function once for each element in an array. It is commonly used for iterating over arrays.
+forEach does not return a new array (unlike map).
+let numbers = [1, 2, 3];
+numbers.forEach((num) => console.log(num));
+// Output: 1 2 3
+
+=> map:
 
