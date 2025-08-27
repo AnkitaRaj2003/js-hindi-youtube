@@ -1,0 +1,43 @@
+Q What is JS?
+JavaScript is a programming language used in web pages to add interactivity and dynamic behavior, beyond just structure (HTML) and style (CSS).
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+- JS is a loosely types language
+
+🔹 Scope of Variables
+Q: What is the scope of variables declared with var, let, and const?
+var → function-scoped (or globally scoped if declared outside a function).
+let & const → block-scoped (accessible only inside { } where declared).
+👉 Example:
+if (true) {
+  var a = 10;
+  let b = 20;
+}
+console.log(a); // 10 ✅
+console.log(b); // ReferenceError ❌
+
+🔹 Hoisting
+Q: What is hoisting in JavaScript?
+Hoisting is JavaScript’s behavior of moving variable and function declarations to the top of their scope before execution.
+var → hoisted & initialized as undefined.
+let & const → hoisted but not initialized (temporal dead zone).
+👉 Example:
+console.log(x); // undefined (var hoisted)
+var x = 5;
+
+console.log(y); // ReferenceError (TDZ)
+let y = 10;
+
+🔹 Difference between var, let, and const
+Feature	                    var	                      let	                  const
+Scope	                      Function/global	          Block	                Block
+Redeclaration              	✅ Allowed	              ❌ Not allowed	      ❌ Not allowed
+Reassignment	              ✅ Allowed  	            ✅ Allowed	          ❌ Not allowed
+Hoisting	                  Hoisted → undefined	      Hoisted → TDZ	        Hoisted → TDZ
+Initialization	            Optional	                Optional	            Mandatory at declaration
+
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+=> Datatypes in JS: Number, String, Boolean, NULL, Undefined, Objects
