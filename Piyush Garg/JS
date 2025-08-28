@@ -329,7 +329,45 @@ document.querySelectorAll(".btn");  // all elements with class="btn"
 
 --------------------------------------------------------------------------------------------------------------------------------
 
-EVENTS:
+=> Difference between == and ===?
+The == operator is known as the loose equality operator. It compares two values for equality after performing type coercion, meaning it converts the values to the same type before comparing them.
+The === operator is called the strict equality operator. It checks for equality without type conversion, meaning both the value and the type must be exactly the same for the comparison to return true.
 
-=> onclick(): 
+=> Difference between null, undefined, and undeclared variables?
+- undefined
+A variable is declared but not assigned a value.
+Example:
+let a;
+console.log(a); // undefined
 
+- null
+A variable is explicitly assigned to represent "no value".
+Example:
+let b = null;
+console.log(b); // null
+
+- Undeclared
+A variable that was never declared in the current scope.
+Accessing it throws a ReferenceError.
+Example:
+console.log(c); // ReferenceError: c is not defined
+
+=> Difference between Synchronous and Asynchronous functions
+- Synchronous:
+Code executes line by line.
+Each statement waits for the previous one to finish.
+Example:
+console.log("A");
+console.log("B");
+// Output: A B
+
+- Asynchronous:
+Code execution doesn’t block.
+Tasks that take time (e.g., API calls, setTimeout) run in the background, and results are handled later (via callback, promises, or async/await).
+Example:
+console.log("A");
+setTimeout(() => console.log("B"), 1000);
+console.log("C");
+// Output: A C B
+
+=> 
