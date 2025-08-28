@@ -283,7 +283,7 @@ console.log(arr); // [1, 99, 100, 4]
 
 --------------------------------------------------------------------------------------------------------------------------------
 
-=> innerHTML and innerText:
+=> innerHTML, innerText and innerText:
 
 🔹 innerHTML
 Think: HTML + text inside
@@ -308,6 +308,17 @@ If I set:
 document.getElementById("demo").innerText = "<i>Hi</i>";
 It shows literally <i>Hi</i> (not italic).
 
+🔹 textContent
+Returns all text inside the node, including text that is hidden by CSS (display:none, visibility:hidden).
+Does not parse HTML tags, only gives raw text.
+More performant than innerText.
+👉 Example:
+<p id="demo" style="display:none"><b>Hello</b></p>
+document.getElementById("demo").textContent;
+// Output: "Hello"   (even though it's hidden!)
+
+document.getElementById("demo").textContent = "<i>Hi</i>";
+// Shows literally: <i>Hi</i>
 => querySelector and querySelectorAll:
 
 🔹 querySelector()
