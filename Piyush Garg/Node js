@@ -1,0 +1,24 @@
+Q What is Node JS?
+🔹 JavaScript Engines & Runtime
+JavaScript itself is just a language. It needs an engine to run.
+Every browser has its own engine:
+Chrome, Edge → V8
+Firefox → SpiderMonkey
+Safari → JavaScriptCore (a.k.a. Nitro)
+🔹 Node.js
+Node.js = V8 Engine + C++ APIs
+It’s a javascript runtime environment, meaning it provides everything needed to run JS outside the browser.
+Example: File system access, networking, OS operations — things browsers don’t allow.
+That’s why with Node.js, you can build servers, command-line tools, real-time apps etc.
+
+Q How Nodejs works?
+https://youtu.be/y0aTs56DJWk?si=HFJzraBJIluYxvqC
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+=> HTTP Methods:
+- GET: when you want to get some data from the server.
+- POST: when we want to send and mutate some data in server.
+
+
+
