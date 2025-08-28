@@ -270,5 +270,14 @@ console.log(arr); // [1, 99, 100, 4]
 
 --------------------------------------------------------------------------------------------------------------------------------
 
+=> DOM: The DOM is a tree-like structure of a webpage, where each HTML element (like <div>, <ul>, <p>) is represented as a node. Using JavaScript, we can access and manipulate these nodes to change the content, style, or structure of the webpage dynamically.
+- DOM (Document Object Model) is the way a browser represents a webpage as a tree-like structure.
+- Each HTML element (like <p>, <div>) becomes a node in this tree.
+- With JavaScript, we can use the DOM to change text, style, or even add/remove elements on the page without reloading it.
 
+=> window:
+- window is the global object provided by the browser.
+- It represents the browser window/tab that displays the webpage.
+- All global variables, functions, and objects like document, console, setTimeout, alert etc. are properties of the window object.
+- Interaction with browser is done using window.
 
