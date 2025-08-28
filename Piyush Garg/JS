@@ -416,3 +416,43 @@ function createBankAccount(initialBalance) {
 const account = createBankAccount(1000);
 console.log(account.getBalance()); // 1000
 console.log(account.balance);      // undefined (private)
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+What is event bubbling and capturing? 
+What is event delegation? 
+What is the difference between <script>, <script async>, and <script defer>? 
+Difference between cookie, sessionStorage, and localStorage.
+Difference between Window object and Document object.
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+=> setTimeOut and setInterval:
+
+- setTimeout:
+Executes a function once after a specified delay (in ms).
+Returns a timeout ID (can be cleared with clearTimeout).
+👉 Example:
+let timer = setTimeout(() => {
+  console.log("Runs after 2 seconds");
+}, 2000);
+
+// Cancel it before it runs
+clearTimeout(timer);
+✅ Use case: Delayed execution, debouncing (e.g., wait until user stops typing).
+
+- setInterval:
+Executes a function repeatedly at fixed time intervals (in ms).
+Returns an interval ID (can be cleared with clearInterval).
+👉 Example:
+let counter = 0;
+let interval = setInterval(() => {
+  console.log("Tick", ++counter);
+  if (counter === 5) clearInterval(interval);
+}, 1000);
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+Promise: https://www.youtube.com/watch?v=VLiE5tyfko4&list=PLinedj3B30sDFRdgPYvjnBs2JsDdHPIMv&index=18
+
+
