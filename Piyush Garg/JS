@@ -370,4 +370,38 @@ setTimeout(() => console.log("B"), 1000);
 console.log("C");
 // Output: A C B
 
-=> 
+--------------------------------------------------------------------------------------------------------------------------------
+
+=> closure:
+
+A closure is when a function "remembers" variables from its outer scope even after the outer function has finished executing. Closures are very useful in JavaScript for data privacy, state management, and callbacks.
+
+EX:
+function createCounter() {
+    let count = 0;  // private variable
+    return {
+        increment: function() { count++; return count; },
+        decrement: function() { count--; return count; },
+        getValue: function() { return count; }
+    };
+}
+
+const counter = createCounter();
+console.log(counter.increment()); // 1
+console.log(counter.increment()); // 2
+console.log(counter.getValue());  // 2
+console.log(counter.decrement()); // 1
+
+- Data Privacy:
+
+function createBankAccount(initialBalance) {
+  let balance = initialBalance; // private variable
+  return {
+    deposit: (amount) => balance += amount,
+    withdraw: (amount) => balance -= amount,
+    getBalance: () => balance
+  };
+}
+const account = createBankAccount(1000);
+console.log(account.getBalance()); // 1000
+console.log(account.balance);      // undefined (private)
